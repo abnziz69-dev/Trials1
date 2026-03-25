@@ -68,7 +68,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1A1A1A),
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
         body: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -90,6 +90,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       begin: AlignmentDirectional(1.0, 1.0),
                       end: AlignmentDirectional(-1.0, -1.0),
                     ),
+                    borderRadius: BorderRadius.circular(22.0),
                   ),
                   child: Padding(
                     padding:
@@ -105,33 +106,37 @@ class _HomeWidgetState extends State<HomeWidget> {
                             Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Container(
-                                  width: 52.0,
-                                  height: 52.0,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFF2A2A2A),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 12.0,
-                                        color: Color(0x66FF6A00),
-                                        offset: Offset(
-                                          0.0,
-                                          4.0,
-                                        ),
-                                      )
-                                    ],
-                                    borderRadius: BorderRadius.circular(12.0),
-                                    border: Border.all(
-                                      color: Color(0xFFFF6A00),
-                                      width: 1.5,
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 20.0, 0.0, 0.0),
+                                  child: Container(
+                                    width: 52.0,
+                                    height: 52.0,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFF2A2A2A),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          blurRadius: 12.0,
+                                          color: Color(0x66FF6A00),
+                                          offset: Offset(
+                                            0.0,
+                                            4.0,
+                                          ),
+                                        )
+                                      ],
+                                      borderRadius: BorderRadius.circular(12.0),
+                                      border: Border.all(
+                                        color: Color(0xFFFF6A00),
+                                        width: 1.5,
+                                      ),
                                     ),
-                                  ),
-                                  child: Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
-                                    child: Icon(
-                                      Icons.wifi_tethering,
-                                      color: Color(0xFFFF6A00),
-                                      size: 28.0,
+                                    child: Align(
+                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      child: Icon(
+                                        Icons.wifi_tethering,
+                                        color: Color(0xFFFF6A00),
+                                        size: 28.0,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -664,7 +669,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
                                 width: 40.0,
@@ -704,6 +709,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               Text(
                                 'Register & store a new RFID tag',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodySmall
                                     .override(
@@ -801,7 +807,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
                                 width: 40.0,
@@ -821,6 +827,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               Text(
                                 'Saved Tags',
+                                textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .titleMedium
                                     .override(
@@ -841,6 +848,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               Text(
                                 'Scan, match & export tag data',
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodySmall
                                     .override(
