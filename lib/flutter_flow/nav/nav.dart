@@ -44,6 +44,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: HomeWidget.routeName,
           path: HomeWidget.routePath,
           builder: (context, params) => HomeWidget(),
+        ),
+        FFRoute(
+          name: SavedTagsWidget.routeName,
+          path: SavedTagsWidget.routePath,
+          builder: (context, params) => SavedTagsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
