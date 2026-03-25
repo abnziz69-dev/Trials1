@@ -90,7 +90,9 @@ class _SavedTagsWidgetState extends State<SavedTagsWidget> {
                 color: Colors.white,
                 size: 24.0,
               ),
-              onPressed: () async {},
+              onPressed: () async {
+                context.safePop();
+              },
             ),
           ),
           title: Text(
@@ -381,44 +383,6 @@ class _SavedTagsWidgetState extends State<SavedTagsWidget> {
                                   children: [
                                     Text(
                                       'Matched',
-                                      style: FlutterFlowTheme.of(context)
-                                          .labelMedium
-                                          .override(
-                                            font: GoogleFonts.inter(
-                                              fontWeight: FontWeight.w500,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .labelMedium
-                                                      .fontStyle,
-                                            ),
-                                            color: Color(0xFFAAAAAA),
-                                            fontSize: 13.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.w500,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMedium
-                                                    .fontStyle,
-                                          ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Container(
-                              height: 34.0,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF2C2C2C),
-                                borderRadius: BorderRadius.circular(17.0),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    14.0, 0.0, 14.0, 0.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      'Unmatched',
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
